@@ -37,4 +37,3 @@ error message).
 On clicking "Delete" in the actions column, show a confirmation modal and delete the
 user from the array if confirmed.
 Pagination - show 10 items on the page by default.
-Please use Angular Material for pagination and form elements.
