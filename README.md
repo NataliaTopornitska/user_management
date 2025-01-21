@@ -21,11 +21,11 @@ data), Delete
 On clicking "Create User" and "Edit" buttons, show a modal with a form. Please use
 Angular Reactive Forms. The form must contain the following fields:
 
-● First name - required, max length 100
-● Last name - required, max length 100
-● Email - required, max length 100, email validation
-● Description - not required, max length 1000
-● Tags - not required, array of strings.
+- First name - required, max length 100
+- Last name - required, max length 100
+- Email - required, max length 100, email validation
+- Description - not required, max length 1000
+- Tags - not required, array of strings.
 
 You can use Angular Material chips or an input field where tags are separated by
 commas, or a multi-select. After adding a user, please push the new object to the array of
