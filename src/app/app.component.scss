@@ -1,0 +1,75 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.mat-toolbar {
+  background-color: #1e96fc;
+  color: white;
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  color: #333;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 15px;
+  font-size: 12px;
+  border: 1px solid #A2ADB6;
+}
+
+button[mat-icon-button] {
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button[mat-icon-button]:hover {
+  border-radius: 4px;
+  transform: scale(1.2);
+}
+
+.mat-icon {
+  font-size: 20px;
+  color: #1e96fc;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  border: 1px solid #A2ADB6;
+  padding: 3px;
+  padding-top: 4px;
+}
+
+.header_cell {
+  background-color: #fff;
+}
+
+th {
+  color:  #1E96FC;
+  font-weight: bold;
+  font-size: 17px;
+       text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0  white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+}
+
+table {
+  background-color: #fafafa;
+}
+
+table th:nth-child(-n+7) {
+  background-color: #dae6fa;
+}
+
+
+.list-title {
+  color: #1E96FC;
+}

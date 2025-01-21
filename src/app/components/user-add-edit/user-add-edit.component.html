@@ -1,0 +1,59 @@
+<div class="modal-container">
+  <div mat-dialog-title>
+    <h1 class="title">Create user</h1>
+  </div>
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" placeholder="Enter your name" required formControlName="firstName">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" placeholder="Enter your last name" required formControlName="lastName">
+      </mat-form-field>
+
+      <div class="date">
+        <mat-form-field appearance="outline">
+          <mat-label>Created at</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="createdAt">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="info@gmail.com" [formControl]="email" (blur)="updateErrorMessage()" required />
+        @if (email.invalid) {
+        <mat-error>{{errorMessage()}}</mat-error>
+        }
+      </mat-form-field>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Tags</mat-label>
+          <mat-select [formControl]="tags" multiple>
+            @for (tags of tagsList; track tags) {
+            <mat-option [value]="tags">{{tags}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea matInput placeholder="Enter description" formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+      <div mat-dialog-actions class="buttons">
+        <button mat-flat-button type="button" [mat-dialog-close]="false"
+          style="background-color: #fff; border: 1px solid #1E96FC; color: #1E96FC;">Cancel</button>
+        <button mat-flat-button style="background-color:#1E96FC; color: #fff;" type="submit">{{data ? 'Update' :
+          'Create'}}</button>
+      </div>
+    </div>
+  </form>
+</div>

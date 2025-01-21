@@ -1,0 +1,32 @@
+.dialog-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: flex-end;
+  gap: 20px;
+
+  .button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .cancel {
+    background-color: #fff;
+    color: #1e96fc;
+    border: 1px solid #1e96fc;
+  }
+
+  .delete {
+    background-color: #1e96fc;
+    color: #fff;
+  }
+}
